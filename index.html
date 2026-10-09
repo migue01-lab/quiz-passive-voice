@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller: Voz Pasiva y Voz Activa</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --card-bg: #ffffff;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text: #1e293b;
+      --subtext: #475569;
+      --border: #cbd5e1;
+      --feedback-bg: #f8fafc;
+      --accent: #059669;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 16px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: var(--subtext);
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 28px 0 14px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    .card label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .prompt-sentence {
+      background-color: #f1f5f9;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-style: italic;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--primary);
+    }
+
+    button.btn-check {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+
+    button.btn-check:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .solution {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+      background-color: var(--feedback-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.9rem;
+    }
+
+    .solution p {
+      margin-bottom: 6px;
+    }
+
+    .solution p:last-child {
+      margin-bottom: 0;
+    }
+
+    .solution strong {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Práctica: Voz Pasiva y Voz Activa</h1>
+      <p>Escribe tu respuesta en cada casilla y luego presiona el botón para comprobar y leer la explicación.</p>
+    </header>
+
+    <!-- SECCIÓN 1: DE VOZ PASIVA A VOZ ACTIVA -->
+    <div class="section-title">Parte 1: De Voz Pasiva a Voz Activa</div>
+
+    <!-- Ejercicio 1 -->
+    <div class="card">
+      <label>1. Transforma a voz activa:</label>
+      <div class="prompt-sentence">"El libro fue escrito por Gabriel García Márquez."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-1')">Ver Respuesta y Explicación</button>
+      <div id="sol-1" class="solution">
+        <p><strong>Respuesta:</strong> Gabriel García Márquez escribió el libro.</p>
+        <p><strong>Explicación:</strong> El complemento agente ("Gabriel García Márquez") pasa a ser el sujeto directo de la oración, y el verbo compuesto en pretérito pasivo ("fue escrito") cambia al pretérito simple activo ("escribió").</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 2 -->
+    <div class="card">
+      <label>2. Transforma a voz activa:</label>
+      <div class="prompt-sentence">"La casa será remodelada por los arquitectos."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-2')">Ver Respuesta y Explicación</button>
+      <div id="sol-2" class="solution">
+        <p><strong>Respuesta:</strong> Los arquitectos remodelarán la casa.</p>
+        <p><strong>Explicación:</strong> Quien ejecuta la acción ("los arquitectos") toma el lugar del sujeto, conjugando el verbo "remodelar" en tiempo futuro simple activo ("remodelarán").</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="card">
+      <label>3. Transforma a voz activa:</label>
+      <div class="prompt-sentence">"La cena es preparada por mi madre todas las noches."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-3')">Ver Respuesta y Explicación</button>
+      <div id="sol-3" class="solution">
+        <p><strong>Respuesta:</strong> Mi madre prepara la cena todas las noches.</p>
+        <p><strong>Explicación:</strong> "Mi madre" realiza activamente la acción. El verbo pasa del presente pasivo ("es preparada") al presente indicativo ("prepara").</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 4 -->
+    <div class="card">
+      <label>4. Transforma a voz activa:</label>
+      <div class="prompt-sentence">"Los informes han sido revisados por el director."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-4')">Ver Respuesta y Explicación</button>
+      <div id="sol-4" class="solution">
+        <p><strong>Respuesta:</strong> El director ha revisado los informes.</p>
+        <p><strong>Explicación:</strong> El pretérito perfecto compuesto pasivo ("han sido revisados") se transforma en pretérito perfecto compuesto activo ("ha revisado"), concordando en singular con "el director".</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 5 -->
+    <div class="card">
+      <label>5. Transforma a voz activa:</label>
+      <div class="prompt-sentence">"El partido era transmitido por varias cadenas de radio."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-5')">Ver Respuesta y Explicación</button>
+      <div id="sol-5" class="solution">
+        <p><strong>Respuesta:</strong> Varias cadenas de radio transmitían el partido.</p>
+        <p><strong>Explicación:</strong> Se conserva el tiempo pretérito imperfecto: de "era transmitido" pasa a la forma activa "transmitían".</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 6 -->
+    <div class="card">
+      <label>6. Transforma a voz activa:</label>
+      <div class="prompt-sentence">"Una solución rápida fue encontrada por el equipo de soporte."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-6')">Ver Respuesta y Explicación</button>
+      <div id="sol-6" class="solution">
+        <p><strong>Respuesta:</strong> El equipo de soporte encontró una solución rápida.</p>
+        <p><strong>Explicación:</strong> "El equipo de soporte" asume la posición de sujeto y el verbo adopta la forma activa en pretérito simple ("encontró").</p>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 2: DE VOZ ACTIVA A VOZ PASIVA -->
+    <div class="section-title">Parte 2: De Voz Activa a Voz Pasiva</div>
+
+    <!-- Ejercicio 7 -->
+    <div class="card">
+      <label>7. Transforma a voz pasiva:</label>
+      <div class="prompt-sentence">"El jardinero podó los arbustos del parque."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-7')">Ver Respuesta y Explicación</button>
+      <div id="sol-7" class="solution">
+        <p><strong>Respuesta:</strong> Los arbustos del parque fueron podados por el jardinero.</p>
+        <p><strong>Explicación:</strong> El objeto directo ("los arbustos del parque") se convierte en sujeto paciente. Se utiliza el verbo "ser" en pretérito ("fueron") + participio ("podados") y se añade el complemento agente con "por".</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 8 -->
+    <div class="card">
+      <label>8. Transforma a voz pasiva:</label>
+      <div class="prompt-sentence">"La empresa lanzará un nuevo producto el próximo mes."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-8')">Ver Respuesta y Explicación</button>
+      <div id="sol-8" class="solution">
+        <p><strong>Respuesta:</strong> Un nuevo producto será lanzado por la empresa el próximo mes.</p>
+        <p><strong>Explicación:</strong> El objeto directo "un nuevo producto" pasa al inicio; el verbo activo en futuro ("lanzará") se convierte en "será lanzado" manteniendo el tiempo futuro.</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 9 -->
+    <div class="card">
+      <label>9. Transforma a voz pasiva:</label>
+      <div class="prompt-sentence">"Miles de turistas visitan el museo cada día."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-9')">Ver Respuesta y Explicación</button>
+      <div id="sol-9" class="solution">
+        <p><strong>Respuesta:</strong> El museo es visitado por miles de turistas cada día.</p>
+        <p><strong>Explicación:</strong> "El museo" pasa a ser sujeto paciente. Como la acción original está en presente ("visitan"), el verbo auxiliar "ser" se conjuga en presente singular ("es") seguido del participio ("visitado").</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 10 -->
+    <div class="card">
+      <label>10. Transforma a voz pasiva:</label>
+      <div class="prompt-sentence">"Los bomberos apagaron el incendio rápidamente."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-10')">Ver Respuesta y Explicación</button>
+      <div id="sol-10" class="solution">
+        <p><strong>Respuesta:</strong> El incendio fue apagado rápidamente por los bomberos.</p>
+        <p><strong>Explicación:</strong> El objeto directo "el incendio" pasa a recibir la acción, transformando el verbo en pasado a "fue apagado" y asignando "por los bomberos" como complemento agente.</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 11 -->
+    <div class="card">
+      <label>11. Transforma a voz pasiva:</label>
+      <div class="prompt-sentence">"El científico descubrió una nueva especie de planta."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-11')">Ver Respuesta y Explicación</button>
+      <div id="sol-11" class="solution">
+        <p><strong>Respuesta:</strong> Una nueva especie de planta fue descubierta por el científico.</p>
+        <p><strong>Explicación:</strong> El objeto femenino "una nueva especie de planta" se vuelve sujeto; el participio concuerda en género ("descubierta") y el agente queda introducido por "por".</p>
+      </div>
+    </div>
+
+    <!-- Ejercicio 12 -->
+    <div class="card">
+      <label>12. Transforma a voz pasiva:</label>
+      <div class="prompt-sentence">"El comité ha aprobado el presupuesto anual."</div>
+      <input type="text" placeholder="Escribe aquí tu respuesta...">
+      <button class="btn-check" onclick="toggleSolution('sol-12')">Ver Respuesta y Explicación</button>
+      <div id="sol-12" class="solution">
+        <p><strong>Respuesta:</strong> El presupuesto anual ha sido aprobado por el comité.</p>
+        <p><strong>Explicación:</strong> La perífrasis de pretérito perfecto compuesto activo ("ha aprobado") cambia a su contraparte pasiva ("ha sido aprobado"), manteniendo el tiempo original.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleSolution(id) {
+      const box = document.getElementById(id);
+      if (box.style.display === "block") {
+        box.style.display = "none";
+      } else {
+        box.style.display = "block";
+      }
+    }
+  </script>
+</body>
+      </html>
+      
