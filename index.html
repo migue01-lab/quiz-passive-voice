@@ -144,7 +144,7 @@
     .feedback-status {
       font-size: 1.1rem;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .correct .feedback-status {
@@ -155,13 +155,22 @@
       color: var(--error);
     }
 
-    .expected-answer {
+    .solution-sentence {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 8px 12px;
+      border-radius: 6px;
       margin-top: 6px;
-      font-weight: 600;
+      font-size: 0.98rem;
+      line-height: 1.4;
+      border-left: 3px solid currentColor;
+    }
+
+    .solution-sentence span {
+      font-weight: 700;
     }
 
     .explanation {
-      margin-top: 8px;
+      margin-top: 10px;
       font-size: 0.9rem;
       color: var(--subtext);
       line-height: 1.45;
@@ -187,8 +196,8 @@
       <button class="btn-check" onclick="checkAnswer(1)">Check Answer</button>
       <div id="fb-1" class="feedback-box">
         <div id="status-1" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> George Orwell wrote the novel.</div>
-        <div class="explanation"><strong>Explanation:</strong> The agent ("George Orwell") becomes the active subject. The past simple passive ("was written") changes to the past simple active ("wrote").</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> George Orwell wrote the novel.</div>
+        <div class="explanation"><strong>Explanation:</strong> The agent ("George Orwell") becomes the subject. The past simple passive ("was written") shifts to past simple active ("wrote").</div>
       </div>
     </div>
 
@@ -200,8 +209,8 @@
       <button class="btn-check" onclick="checkAnswer(2)">Check Answer</button>
       <div id="fb-2" class="feedback-box">
         <div id="status-2" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The architects will remodel the house.</div>
-        <div class="explanation"><strong>Explanation:</strong> "The architects" perform the action in the future simple tense ("will remodel"), taking "the house" as the direct object.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The architects will remodel the house.</div>
+        <div class="explanation"><strong>Explanation:</strong> "The architects" perform the action in the future simple tense ("will remodel"), taking "the house" as direct object.</div>
       </div>
     </div>
 
@@ -213,8 +222,8 @@
       <button class="btn-check" onclick="checkAnswer(3)">Check Answer</button>
       <div id="fb-3" class="feedback-box">
         <div id="status-3" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> My mother cooks dinner every evening.</div>
-        <div class="explanation"><strong>Explanation:</strong> The present passive ("is cooked") transforms into the simple present third-person singular ("cooks") with "my mother" as the subject.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> My mother cooks dinner every evening.</div>
+        <div class="explanation"><strong>Explanation:</strong> The present passive ("is cooked") transforms into the simple present third-person singular ("cooks") with "my mother" as subject.</div>
       </div>
     </div>
 
@@ -226,7 +235,7 @@
       <button class="btn-check" onclick="checkAnswer(4)">Check Answer</button>
       <div id="fb-4" class="feedback-box">
         <div id="status-4" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The manager has reviewed the reports.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The manager has reviewed the reports.</div>
         <div class="explanation"><strong>Explanation:</strong> The present perfect passive ("have been reviewed") becomes present perfect active ("has reviewed"), agreeing with singular "the manager".</div>
       </div>
     </div>
@@ -239,7 +248,7 @@
       <button class="btn-check" onclick="checkAnswer(5)">Check Answer</button>
       <div id="fb-5" class="feedback-box">
         <div id="status-5" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The band is recording a new song.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The band is recording a new song.</div>
         <div class="explanation"><strong>Explanation:</strong> Present continuous passive ("is being recorded") changes into present continuous active ("is recording").</div>
       </div>
     </div>
@@ -252,7 +261,7 @@
       <button class="btn-check" onclick="checkAnswer(6)">Check Answer</button>
       <div id="fb-6" class="feedback-box">
         <div id="status-6" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The children broke the window.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The children broke the window.</div>
         <div class="explanation"><strong>Explanation:</strong> The agent "the children" becomes the subject, and "was broken" shifts to the irregular past simple active form "broke".</div>
       </div>
     </div>
@@ -268,8 +277,8 @@
       <button class="btn-check" onclick="checkAnswer(7)">Check Answer</button>
       <div id="fb-7" class="feedback-box">
         <div id="status-7" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The bushes in the park were pruned by the gardener.</div>
-        <div class="explanation"><strong>Explanation:</strong> The plural direct object ("the bushes in the park") becomes the subject. We use the past plural of *to be* ("were") + past participle ("pruned") + "by the gardener".</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The bushes in the park were pruned by the gardener.</div>
+        <div class="explanation"><strong>Explanation:</strong> Plural object ("the bushes in the park") becomes the subject. We use past plural of *to be* ("were") + past participle ("pruned") + agent ("by the gardener").</div>
       </div>
     </div>
 
@@ -281,8 +290,8 @@
       <button class="btn-check" onclick="checkAnswer(8)">Check Answer</button>
       <div id="fb-8" class="feedback-box">
         <div id="status-8" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> A new product will be launched by the company next month.</div>
-        <div class="explanation"><strong>Explanation:</strong> The future active form ("will launch") converts to the modal passive form ("will be launched").</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> A new product will be launched by the company next month.</div>
+        <div class="explanation"><strong>Explanation:</strong> Future active form ("will launch") converts to modal passive form ("will be launched").</div>
       </div>
     </div>
 
@@ -294,7 +303,7 @@
       <button class="btn-check" onclick="checkAnswer(9)">Check Answer</button>
       <div id="fb-9" class="feedback-box">
         <div id="status-9" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The museum is visited by millions of tourists every year.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The museum is visited by millions of tourists every year.</div>
         <div class="explanation"><strong>Explanation:</strong> "The museum" is singular and the tense is present simple ("visit"), so we use "is visited" followed by the agent.</div>
       </div>
     </div>
@@ -307,8 +316,8 @@
       <button class="btn-check" onclick="checkAnswer(10)">Check Answer</button>
       <div id="fb-10" class="feedback-box">
         <div id="status-10" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The fire was extinguished quickly by the firefighters.</div>
-        <div class="explanation"><strong>Explanation:</strong> Past simple passive: singular subject "the fire" requires "was extinguished", ending with the agent "by the firefighters".</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The fire was extinguished quickly by the firefighters.</div>
+        <div class="explanation"><strong>Explanation:</strong> Singular subject "the fire" requires past simple passive "was extinguished", ending with "by the firefighters".</div>
       </div>
     </div>
 
@@ -320,7 +329,7 @@
       <button class="btn-check" onclick="checkAnswer(11)">Check Answer</button>
       <div id="fb-11" class="feedback-box">
         <div id="status-11" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> A new plant species was discovered by the scientist.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> A new plant species was discovered by the scientist.</div>
         <div class="explanation"><strong>Explanation:</strong> "A new plant species" receives the action in past simple: "was discovered", followed by the agent.</div>
       </div>
     </div>
@@ -333,7 +342,7 @@
       <button class="btn-check" onclick="checkAnswer(12)">Check Answer</button>
       <div id="fb-12" class="feedback-box">
         <div id="status-12" class="feedback-status"></div>
-        <div class="expected-answer"><strong>Correct Answer:</strong> The annual budget has been approved by the committee.</div>
+        <div class="solution-sentence"><span>Full Sentence:</span> The annual budget has been approved by the committee.</div>
         <div class="explanation"><strong>Explanation:</strong> Present perfect active ("has approved") converts to present perfect passive ("has been approved").</div>
       </div>
     </div>
@@ -393,10 +402,9 @@
         status.innerHTML = "&#10004; Correct!";
       } else {
         feedback.className = "feedback-box incorrect";
-        status.innerHTML = "&#10008; Incorrect!";
+        status.innerHTML = "&#10008; Incorrect! Here is the correct sentence:";
       }
     }
   </script>
 </body>
-                                                                       </html>
-                                                                       
+</html>
